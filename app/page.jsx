@@ -5,26 +5,17 @@ import {BsFillArrowUpRightSquareFill} from 'react-icons/bs'
 import NavBar from './componentes/UI/NavBar'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import Scrambler from 'scrambling-text'
 import { TypeAnimation } from "react-type-animation";
 
 
 export default function Home() {
-
-  const [iterTitle, setIterTitle] = useState("ITER");
-  const scramblerRef = useRef(new Scrambler());
-
-  useEffect(() => {
-    scramblerRef.current.scramble(iterTitle, setIterTitle)
-  }, []);
-
   return (
     <main id='main' className="flex min-h-screen flex-col items-center bg-black overflow-hidden">
       
       <header id='headerIter' className='flex w-screen h-screen items-center justify-center lg:justify-start overflow-hidden'>
         <NavBar toPage="/App" backColor="#0D0D0D" textColor="white"/>
         <div id='headerTextContainer' className='lg:ml-20 z-10'>
-          <h1  id='headerTitle' className='text-white text-8xl lg:text-[16vw]'>{iterTitle}</h1>
+          <h1  id='headerTitle' className='text-white text-8xl lg:text-[16vw]'>ITER</h1>
           <p  id="headerDescription" className="text-white font-light text-sm lg:text-base w-[60vw] lg:w-[25vw]">
             <TypeAnimation
               sequence={[
