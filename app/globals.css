@@ -2,26 +2,72 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+  font-family: "myFont";
+  src: url("./fonts/Syncrone.otf");
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.section {
+  height: 80vh;
+  width: 80vh;
+  margin: 2vh;
+  background-color: blue;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+#NavBar {
+  font-family: "myFont";
+}
+
+#headerTitle {
+  font-family: "myFont";
+  font-weight: 700;
+}
+
+#buttonHeader {
+  font-family: "myFont";
+}
+
+#headerIconButton {
+  color: black;
+}
+
+#headerIter .iterVideo {
+  position: absolute;
+  z-index: 0;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 0.95;
+}
+
+#videoDiv {
+  position: relative;
+  z-index: 0;
+}
+
+/*App Styles*/
+
+.planetButton {
+  @apply h-fit w-fit px-2 py-1 text-xs lg:text-sm border border-color3 
+}
+
+#planetsSelector::-webkit-scrollbar {
+  height: 6px;
+}
+
+#planetsSelector::-webkit-scrollbar-track {
+  @apply bg-color2
+}
+
+#planetsSelector::-webkit-scrollbar-thumb {
+  @apply bg-color1
+}
+
+/* Data container - App*/
+
+.dataDetail {
+  @apply text-color3 text-xs lg:text-sm
+}
+
+#App {
+  overflow: hidden;
 }
