@@ -5,7 +5,7 @@ import NavBar from '../componentes/UI/NavBar'
 import PlanetSelector from '../componentes/UI/PlanetSelector'
 import TimeIndicator from '../componentes/UI/TimeIndicator'
 
-const page = () => {
+const Page = () => {
 
   useEffect(() => {
 
