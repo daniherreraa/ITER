@@ -1,6 +1,4 @@
 "use client"
-
-import {useRef, useState, useEffect} from 'react'
 import {BsFillArrowUpRightSquareFill} from 'react-icons/bs'
 import NavBar from './componentes/UI/NavBar'
 import Link from 'next/link'
